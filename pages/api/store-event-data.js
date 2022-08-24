@@ -33,7 +33,7 @@ async function makeFileObjects(body) {
   }
 
   function makeStorageClient() {
-    return new Web3Storage({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDZBNTBDMTVGZUFkNEQ5M2IwRjYyYjBkNDMxZjk0NTM2MzRDQWNERjkiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NjEwNzc5MDk2MzcsIm5hbWUiOiJXZWIzUlNWUCJ9.0dYOU8L9bH1kAnh32z-clGj6Y1YMxq3vKl7GG3_w7gI"});
+    return new Web3Storage({ token: process.env.WEB3STORAGE_TOKEN});
   }
 
   async function storeFiles(files) {

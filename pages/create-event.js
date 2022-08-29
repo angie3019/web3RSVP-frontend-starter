@@ -30,6 +30,8 @@ export default function CreateEvent() {
       link: eventLink,
       image: getRandomImage(),
     };
+    console.log("event details:" + eventName + " " + eventDescription);
+    console.log("body" + JSON.stringify(body))
     try {
       const response = await fetch("/api/store-event-data", {
         method: "POST",

@@ -12,6 +12,7 @@ export default async function handler(req, res) {
 }
 async function storeEventData(req, res) {
   const body = req.body;
+  console.log("api body" + JSON.stringify(body));
   try {
     const files = await makeFileObjects(body);
     const cid = await storeFiles(files);
@@ -29,6 +30,7 @@ async function makeFileObjects(body) {
     const files = await getFilesFromPath(imageDirectory);
   
     files.push(new File([buffer], "data.json"));
+    console.log("api files" + imageDirectory);
     return files;
   }
 

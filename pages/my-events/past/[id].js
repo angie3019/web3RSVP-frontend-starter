@@ -207,7 +207,7 @@ function PastEvent() {
                             </tr>
                           </thead>
                           <tbody className="divide-y divide-gray-200 bg-white">
-                            {npm event.rsvps.map((rsvp) => (
+                            { event.rsvps.map((rsvp) => (
                               <tr key={rsvp.attendee.id}>
                                 <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
                                   {rsvp.attendee.id}
@@ -251,6 +251,3 @@ function PastEvent() {
 
 export default PastEvent;
 
-export async function getServerSideProps() {
-
-}
